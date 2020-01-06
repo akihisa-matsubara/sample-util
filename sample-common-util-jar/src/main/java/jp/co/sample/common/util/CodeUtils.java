@@ -3,6 +3,7 @@ package jp.co.sample.common.util;
 import jp.co.sample.common.code.CodeVo;
 import java.lang.reflect.InvocationTargetException;
 import lombok.experimental.UtilityClass;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * コード・ユーティリティ.
@@ -20,6 +21,10 @@ public class CodeUtils {
    */
   @SuppressWarnings("unchecked")
   public static <CD extends CodeVo> CD decode(String codeValue, Class<CD> codeType) {
+    if (StringUtils.isEmpty(codeValue)) {
+      return null;
+    }
+
     CD[] values;
     try {
       values = (CD[]) codeType.getMethod("values").invoke(null);
