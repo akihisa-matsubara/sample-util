@@ -37,8 +37,7 @@ public class LocalDateTimeFormatUtils {
     if (text == null) {
       return null;
     }
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format.getApiCode());
-    formatter.withResolverStyle(ResolverStyle.STRICT);
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format.getApiCode()).withResolverStyle(ResolverStyle.STRICT);
     return LocalDateTime.parse(text, formatter);
   }
 
