@@ -1,7 +1,7 @@
 package jp.co.sample.common.util;
 
 import static org.assertj.core.api.Assertions.*;
-import jp.co.sample.common.code.DateFormat.DateFormatVo;
+import jp.co.sample.common.util.DateFormat.DateFormatVo;
 import jp.co.sample.test.util.ClassTestUtils;
 import jp.co.sample.test.util.LocalDateTimeTestUtils;
 import java.time.LocalDateTime;

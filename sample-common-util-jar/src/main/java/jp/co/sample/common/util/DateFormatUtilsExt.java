@@ -1,6 +1,6 @@
 package jp.co.sample.common.util;
 
-import jp.co.sample.common.code.DateFormat.DateFormatVo;
+import jp.co.sample.common.util.DateFormat.DateFormatVo;
 import java.text.ParseException;
 import java.util.Date;
 import lombok.experimental.UtilityClass;

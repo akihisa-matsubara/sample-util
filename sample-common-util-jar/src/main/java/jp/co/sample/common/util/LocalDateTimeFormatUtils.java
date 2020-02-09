@@ -1,6 +1,6 @@
 package jp.co.sample.common.util;
 
-import jp.co.sample.common.code.DateFormat.DateFormatVo;
+import jp.co.sample.common.util.DateFormat.DateFormatVo;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;

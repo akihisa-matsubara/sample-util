@@ -1,5 +1,6 @@
-package jp.co.sample.common.code;
+package jp.co.sample.common.util;
 
+import jp.co.sample.common.code.CodeVo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
