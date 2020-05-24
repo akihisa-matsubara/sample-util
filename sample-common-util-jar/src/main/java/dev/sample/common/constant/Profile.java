@@ -14,6 +14,9 @@ public final class Profile {
   /** integration test. */
   public static final String IT = "it";
 
+  /** continuous integration. */
+  public static final String CI = "ci";
+
   /** unit integration test. */
   public static final String UIT = "uit";
 
