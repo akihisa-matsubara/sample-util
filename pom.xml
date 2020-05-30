@@ -16,4 +16,17 @@
         <module>sample-web-test-util-jar</module>
     </modules>
 
+    <properties>
+        <!-- maven repository settings -->
+        <git.repositoryOwner>akihisa-matsubara</git.repositoryOwner>
+        <git.repositoryName>maven</git.repositoryName>
+        <git.branchName>mvn-repo</git.branchName>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>github-maven</id>
+            <url>https://raw.githubusercontent.com/${git.repositoryOwner}/${git.repositoryName}/${git.branchName}/</url>
+        </repository>
+    </repositories>
 </project>
