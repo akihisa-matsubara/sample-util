@@ -22,6 +22,6 @@ jobs:
         java-version: 11
 
     - name: Build + SonarQube with Maven
-      run: mvn -B verify sonar:sonar -Dmaven.test.skip=true -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file pom.xml
+      run: mvn -f ./pom.xml verify sonar:sonar -Dmaven.test.skip=true -Dsonar.login=${{ secrets.SONAR_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
