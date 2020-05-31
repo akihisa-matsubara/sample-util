@@ -40,7 +40,10 @@ public final class DateFormat {
     /** yyyy-MM-dd'T'HH:mm:ss.SSS. */
     YYYYMMDDTHHMMSSSSS(DateFormat.YYYYMMDDTHHMMSSSSS, "uuuu-MM-dd'T'HH:mm:ss.SSS", "YYYYMMDDTHHMMSSSSS"),
     /** yyyyMMddHHmmssSSS. */
-    YYYYMMDDHHMMSSSSS_NO_DELIMITER("yyyyMMddHHmmssSSS", "uuuuMMddHHmmssSSS", "YYYYMMDDHHMMSSSSS_NO_DELIMITER"),
+    // NOTE: DateTimeFormatter won't parse dates with custom format "yyyyMMddHHmmssSSS"
+    // https://bugs.openjdk.java.net/browse/JDK-8031085
+    // Fix Version: 9, IBM Java 8 is OK.
+    // YYYYMMDDHHMMSSSSS_NO_DELIMITER("yyyyMMddHHmmssSSS", "uuuuMMddHHmmssSSS", "YYYYMMDDHHMMSSSSS_NO_DELIMITER"),
     /** HHmmssSSS. */
     HHMMSSSSS_NO_DELIMITER("HHmmssSSS", "HHmmssSSS", "HHMMSSSSS_NO_DELIMITER"),
     ;

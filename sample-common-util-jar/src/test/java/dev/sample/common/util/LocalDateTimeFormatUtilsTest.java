@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import dev.sample.common.util.CodeUtils;
-import dev.sample.common.util.LocalDateTimeFormatUtils;
 import dev.sample.common.util.DateFormat.DateFormatVo;
 import dev.sample.test.util.ClassTestUtils;
 import dev.sample.test.util.LocalDateTimeTestUtils;
@@ -25,7 +23,6 @@ class LocalDateTimeFormatUtilsTest {
         "文字列変換できていること(yyyy-MM-dd形式),                2014-09-30,              2014-09-30T06:30:15.123, yyyy-MM-dd",
         "文字列変換できていること(yyyyMMdd形式),                  20140930,                2014-09-30T06:30:15.123, yyyyMMdd",
         "文字列変換できていること(yyyy-MM-dd'T'HH:mm:ss.SSS形式), 2014-09-30T06:30:15.123, 2014-09-30T06:30:15.123, yyyy-MM-dd'T'HH:mm:ss.SSS",
-        "文字列変換できていること(yyyyMMddHHmmssSSS形式),         20140930063015123,       2014-09-30T06:30:15.123, yyyyMMddHHmmssSSS",
         "文字列変換できていること(HHmmssSSS形式),                 063015123,               2014-09-30T06:30:15.123, HHmmssSSS",
         "nullの場合は空文字であること,                            '',                      ,                        yyyy-MM-dd",
     })
@@ -48,9 +45,8 @@ class LocalDateTimeFormatUtilsTest {
     @DisplayName("正常系")
     @ParameterizedTest
     @CsvSource({
-        "時刻値変換できていること(yyyyMMddHHmmssSSS形式),         2014-09-30T06:30:15.123, 20140930063015123,       yyyyMMddHHmmssSSS",
         "時刻値変換できていること(yyyy-MM-dd'T'HH:mm:ss.SSS形式), 2014-09-30T06:30:15.123, 2014-09-30T06:30:15.123, yyyy-MM-dd'T'HH:mm:ss.SSS",
-        "nullの場合はnullであること,                              ,                        ,                        yyyyMMddHHmmssSSS",
+        "nullの場合はnullであること,                              ,                        ,                        yyyy-MM-dd'T'HH:mm:ss.SSS",
     })
     void test(String desc, String expectedStr, String dateTimeStr, String formatStr) {
       // --- setup -----
