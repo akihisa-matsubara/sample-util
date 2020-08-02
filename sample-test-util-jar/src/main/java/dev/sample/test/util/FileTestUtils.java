@@ -1,11 +1,11 @@
 package dev.sample.test.util;
 
+import dev.sample.test.exception.TestRuntimeException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import lombok.experimental.UtilityClass;
-import dev.sample.test.exception.TestRuntimeException;
 
 /**
  * テスト用ファイルユーティリティー.

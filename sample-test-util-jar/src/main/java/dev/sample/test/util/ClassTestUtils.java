@@ -1,7 +1,7 @@
 package dev.sample.test.util;
 
-import lombok.experimental.UtilityClass;
 import dev.sample.test.exception.TestRuntimeException;
+import lombok.experimental.UtilityClass;
 
 /**
  * テスト用クラスユーティリティー.

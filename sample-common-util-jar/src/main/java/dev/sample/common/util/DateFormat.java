@@ -1,8 +1,8 @@
 package dev.sample.common.util;
 
+import dev.sample.common.code.CodeVo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import dev.sample.common.code.CodeVo;
 
 /**
  * 日付フォーマット定数.
@@ -39,7 +39,7 @@ public final class DateFormat {
     YYYYMMDD_NO_DELIMITER("yyyyMMdd", "uuuuMMdd", "YYYYMMDD_NO_DELIMITER"),
     /** yyyy-MM-dd'T'HH:mm:ss.SSS. */
     YYYYMMDDTHHMMSSSSS(DateFormat.YYYYMMDDTHHMMSSSSS, "uuuu-MM-dd'T'HH:mm:ss.SSS", "YYYYMMDDTHHMMSSSSS"),
-    /** yyyyMMddHHmmssSSS. */
+    // /** yyyyMMddHHmmssSSS. */
     // NOTE: DateTimeFormatter won't parse dates with custom format "yyyyMMddHHmmssSSS"
     // https://bugs.openjdk.java.net/browse/JDK-8031085
     // Fix Version: 9, IBM Java 8 is OK.
